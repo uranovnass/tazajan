@@ -87,18 +87,18 @@ const About = () => {
       <h2 className="section-title">Наша Команда</h2>
       <div className="team-container">
         <div className="team-member">
-          <img className="team-image" src="https://tophit.com/_next/image?url=https%3A%2F%2Ff.tophit.com%2Fget.php%3Fw%3D1080%26h%3D1080%26id%3D2462&w=640&q=75" alt="Директор" />
-          <h3 className="team-name">Иван Иванов</h3>
+          <img className="team-image" src="https://fe-foto.ru/images/catalog/shop/foni/super_white_belyj.jpg" alt="Директор" />
+          <h3 className="team-name">[Имя Директора]</h3>
           <p className="team-role">Основатель & Генеральный директор</p>
         </div>
         <div className="team-member">
-          <img className="team-image" src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_652d27fdea8a694d788e2ef7_652e28158365541c394d54ca/scale_1200" alt="Маркетолог" />
-          <h3 className="team-name">Елена Петрова</h3>
+          <img className="team-image" src="https://fe-foto.ru/images/catalog/shop/foni/super_white_belyj.jpg" alt="Маркетолог" />
+          <h3 className="team-name">[Имя Маркетолога]</h3>
           <p className="team-role">Менеджер по маркетингу</p>
         </div>
         <div className="team-member">
-          <img className="team-image" src="https://vesti.az/storage/news/2024/october/12/big/6709efcc60baa6709efcc60bab17287044606709efcc60ba86709efcc60ba9.webp" alt="Операционный директор" />
-          <h3 className="team-name">Максим Сидоров</h3>
+          <img className="team-image" src="https://fe-foto.ru/images/catalog/shop/foni/super_white_belyj.jpg" alt="Операционный директор" />
+          <h3 className="team-name">[Имя Операционного директора]</h3>
           <p className="team-role">Руководитель операций</p>
         </div>
       </div>

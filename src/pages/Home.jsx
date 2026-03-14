@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import NumberFlow from '@number-flow/react';
 
-import hero from "../assets/6taza.png";
-import flour from "../assets/2taza.png";
+import hero from "../assets/combain.png";
+import flour from "../assets/11tazajpg.jpg";
 import corn from "../assets/3taza.png";
 import beet from "../assets/4taza.png";
-import grains from "../assets/9taza.jpg";
+import grains from "../assets/12taza.jpg";
 import farmers from "../assets/5taza.png";
 import logo from "../assets/8taza.png";
 
@@ -97,9 +97,9 @@ function App() {
         <div className="container">
           <h2 className="section-title">Наши продукты</h2>
           <div className="cards">
-            <ProductCard image={flour} title="Мука" text="Высококачественная мука пшеничная" />
+            <ProductCard image={flour} title="Сахар" text="Высококачественный сахар" />
             <ProductCard image={corn} title="Кукуруза" text="Золотистая кукуруза отборного качества" />
-            <ProductCard image={grains} title="Крупы" text="Гречка, рис, пшено и другие" />
+            <ProductCard image={grains} title="Пшеницы" text="Высококачественная пшеница" />
             <ProductCard image={beet} title="Свекла" text="Сладкая и сочная столовая свекла" />
           </div>
         </div>

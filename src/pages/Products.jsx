@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 
 const products = [
+   {
+    title: "Яровой Ячмень",
+    description: "Эксплоер, Калькюль, Маргрет, Вакула",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZZYVGAM6DnsUtwuc3jav4Pwv55G2bshReQ&s",
+    price: "21 сом",
+    whatsapp: "0507221208"
+  },
      {
-    title: "Мука Астык",
-    description: "Мука Астык — это злаковый продукт питания, получаемый в результате перемалывания качественных зёрен пшеницы.",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf7kw6Z--bribOWCjxpQV6S5gnhtFlNdVNbg&s",
+    title: "Семенные продукты",
+    description: "Для пшеницы, ячменя и кукурузы",
+    imageUrl: "https://ge.all.biz/img/ge/catalog/4467.jpeg",
     price: "100 сом",
     whatsapp: "0507221208"
   },
   {
     title: "Сахар",
-    description: "",
+    description: "Высококачественный белый сахар",
     imageUrl: "https://zira.uz/wp-content/uploads/2017/08/granulatedsugar.jpg",
     price: "32 сом",
     whatsapp: "0507221208"
@@ -30,13 +37,7 @@ const products = [
     price: "32 сом",
     whatsapp: "0507221208"
   },
-  {
-    title: "Яровой Ячмень",
-    description: "Эксплоер, Калькюль, Маргрет, Вакула",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZZYVGAM6DnsUtwuc3jav4Pwv55G2bshReQ&s",
-    price: "21 сом",
-    whatsapp: "0507221208"
-  },
+ 
   {
     title: "Кукуруза",
     description: "Для кормления животных",
