@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Contact = () => {
+const Contact = ({ t }) => {  // Добавь t в пропсы
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,49 +17,49 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Данные формы:", formData);
-    alert("Спасибо! Сообщение отправлено (проверьте консоль).");
+    console.log("Форма маалыматтары:", formData);
+    alert(t.thankYouMessage);
   };
 
   return (
     <section className="contact-section">
-      <h1 className="contact-title">Контакты</h1>
+      <h1 className="contact-title">{t.contactsTitle}</h1>
       <p className="contact-description">
-        Свяжитесь с нами, и мы с радостью поможем вам с любыми вопросами. Мы всегда на связи!
+        {t.contactsDescription}
       </p>
 
       <div className="contact-details">
         {/* Информационный блок */}
         <div className="contact-info">
-          <h2>Наши координаты</h2>
+          <h2>{t.ourCoordinates}</h2>
           <ul className="contact-list">
             <li className="contact-list-item">
-              <strong>Телефон:</strong> <br/> 
+              <strong>{t.phone}:</strong> <br/> 
               +996 554 412 238 <br /> 
               +996 550 390 390 <br /> 
               +996 703 444 888
             </li>
             <li className="contact-list-item">
-              <strong>Email:</strong> <br/>
+              <strong>{t.email}:</strong> <br/>
               <a href="mailto:nurbiykeberdibekova@gmail.com">nurbiykeberdibekova@gmail.com</a>
             </li>
             <li className="contact-list-item">
-              <strong>Tik Tok:</strong> <br/>
+              <strong>{t.tikTok}:</strong> <br/>
               <a href="https://www.tiktok.com/@tazajan777" target="_blank" rel="noreferrer">@tazajan777</a>
             </li>
             <li className="contact-list-item">
-              <strong>Адрес:</strong> <br/>
-              Кыргызстан, Чуйская область, Исык-Атинский район, с. Новопокровка, ул. Ленина 78
+              <strong>{t.address}:</strong> <br/>
+              {t.addressText}
             </li>
           </ul>
         </div>
 
         {/* Блок формы */}
         <div className="contact-form-container">
-          <h2>Оставьте сообщение</h2>
+          <h2>{t.leaveMessage}</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Ваше имя</label>
+              <label htmlFor="name">{t.yourName}</label>
               <input
                 className="form-input"
                 type="text"
@@ -71,7 +71,7 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Ваш email</label>
+              <label htmlFor="email">{t.yourEmail}</label>
               <input
                 className="form-input"
                 type="email"
@@ -83,7 +83,7 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Сообщение</label>
+              <label htmlFor="message">{t.yourMessage}</label>
               <textarea
                 className="form-textarea"
                 id="message"
@@ -94,14 +94,14 @@ const Contact = () => {
                 required
               />
             </div>
-            <button className="submit-button" type="submit">Отправить</button>
+            <button className="submit-button" type="submit">{t.sendButton}</button>
           </form>
         </div>
       </div>
 
       {/* Блок карты */}
       <div className="map-container">
-        <h2>Наш офис</h2>
+        <h2>{t.ourOffice}</h2>
         <iframe
           className="map-iframe"
           title="map"

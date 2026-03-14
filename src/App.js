@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { translations } from "./translation";
 import "./styles/global.css";
-// Import your page components
+
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -10,23 +11,43 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
+  const [lang, setLang] = useState("ru");
+  const t = translations[lang];
+
   return (
-    <Router>
-      <div className="app">
+    <>
+      {/* Переключатель языка - с классом lang-switcher */}
+    <div className="lang-switcher">
+  <button 
+    className={lang === 'ru' ? 'active' : ''}
+    onClick={() => setLang("ru")}
+  >
+    RU
+  </button>
+  <button 
+    className={lang === 'kg' ? 'active' : ''}
+    onClick={() => setLang("kg")}
+  >
+    KG
+  </button>
+</div>
 
-        <Header />
+      <Router>
+        <div className="app">
+          <Header t={t} />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-<Footer /> 
-      </div>
-    </Router>
+          <Routes>
+            <Route path="/" element={<Home t={t} />} />
+            <Route path="/products" element={<Products t={t} />} />
+            <Route path="/about" element={<About t={t} />} />
+            <Route path="/contacts" element={<Contacts t={t} />} />
+          </Routes>
+
+          <Footer t={t} /> 
+        </div>
+      </Router>
+    </>
   );
-
 }
 
-export default App; // Ensure this line exists at the very bottom
+export default App;
