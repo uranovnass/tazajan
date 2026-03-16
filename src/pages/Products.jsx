@@ -17,7 +17,6 @@ const WHATSAPP_NUMBER = "0507221208";
 const Products = ({ t }) => {
   // Используем два разных состояния, чтобы открытие карточки в одной секции не открывало другую
   const [selectedProductIndex, setSelectedProductIndex] = useState(null);
-  const [selectedSeedIndex, setSelectedSeedIndex] = useState(null);
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
